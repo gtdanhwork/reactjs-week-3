@@ -152,6 +152,10 @@ const ShoesShop = () => {
 		setProductDetail(product);
 	};
 
+	const closeModal = () => {
+		setProductDetail(null);
+	};
+
 	return (
 		<div className="container">
 			<h1 className="text-center my-4">Shoes Shop</h1>
@@ -161,7 +165,10 @@ const ShoesShop = () => {
 				setStateModal={setStateModal}
 			/>
 
-			<Modal content={productDetail} />
+			<Modal
+				content={productDetail}
+				onClose={closeModal}
+			/>
 		</div>
 	);
 };
